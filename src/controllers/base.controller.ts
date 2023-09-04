@@ -1,4 +1,4 @@
-import { LestaAxios } from 'src/lesta-axios';
+import { LestaAxios } from '@lib/lesta-axios';
 
 export abstract class LestaBaseController {
   abstract CONTROLLER_ENDPOINT: string;
@@ -9,14 +9,10 @@ export abstract class LestaBaseController {
   }
 
   protected generateEndpoint(paths: string | string[]): string {
-    let result = '';
-
     if (Array.isArray(paths)) {
-      result = [this.CONTROLLER_ENDPOINT, ...paths].join('/');
+      return `${[this.CONTROLLER_ENDPOINT, ...paths].join('/')}/`;
     } else {
-      result = [this.CONTROLLER_ENDPOINT, paths].join('/');
+      return `${[this.CONTROLLER_ENDPOINT, paths].join('/')}/`;
     }
-
-    return `${result}/`;
   }
 }

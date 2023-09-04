@@ -1,0 +1,16 @@
+.idea/
+*.sln.iml
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.eslintrc.js
+.npmrc
+.prettierrc
+tsconfig.build.json
+tsconfig.json
+yarn.lock
+src
