@@ -1,6 +1,6 @@
 {
   "name": "lesta-mt-api",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "Sergey Yurchenko <alexandrovih3@gmail.com>",
   "description": "Unofficial library for interacting with https://developers.lesta.ru/documentation/guide/getting-started/",
   "keywords": [

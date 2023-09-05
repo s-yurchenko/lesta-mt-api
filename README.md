@@ -3,6 +3,11 @@
 Неофициальная библиотека для взаимодействия с api "Мир Танков" от Lesta Games.  
 [Ссылка на официальную документацию](https://developers.lesta.ru/documentation/guide/getting-started/)
 
+Установка
+> npm i lesta-mt-api
+
+> yarn add lesta-mt-api
+
 ## Реализованные запросы
 
 Запросы:
