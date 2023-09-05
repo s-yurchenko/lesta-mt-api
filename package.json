@@ -25,7 +25,8 @@
     "prebuild": "rimraf dist",
     "build": "tsc && tsc-alias",
     "format": "prettier --write \"src/**/*.ts\"",
-    "lint": "eslint \"src/**/*.ts\" --fix"
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "prepare": "husky install"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
@@ -42,6 +43,8 @@
     "eslint-plugin-no-relative-import-paths": "1.5.2",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-simple-import-sort": "10.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
     "prettier": "2.7.1",
     "ts-loader": "9.3.1",
     "ts-node": "10.8.2",
