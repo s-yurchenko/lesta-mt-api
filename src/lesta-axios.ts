@@ -1,6 +1,7 @@
+import { LestaMtApiResponseError } from '@lib/errors';
 import axios, { Axios, AxiosRequestConfig } from 'axios';
 
-import { LestaErrorResponseDTO, LestaSuccessResponseDTO } from './dtos';
+import { LestaSuccessResponseDTO } from './dtos';
 import { ILestaAxiosOptions } from './interfaces';
 
 function requestDataSerializer(params: Record<string, unknown>): string {
@@ -35,7 +36,7 @@ export class LestaAxios {
     this.axios.interceptors.response.use(
       (response) => {
         if (response.data.status === 'error') {
-          return Promise.reject(new LestaErrorResponseDTO(response.data.error));
+          return Promise.reject(new LestaMtApiResponseError(response.data.error));
         } else if (response.data.status === 'ok') {
           return response.data;
         } else {

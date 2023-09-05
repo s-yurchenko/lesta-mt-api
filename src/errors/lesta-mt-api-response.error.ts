@@ -1,6 +1,8 @@
 import { ILestaError } from '@lib/interfaces';
 
-export class LestaErrorResponseDTO extends Error {
+import { BaseLestaMTLibError } from './base.error';
+
+export class LestaMtApiResponseError extends BaseLestaMTLibError {
   status: 'error';
   error: ILestaError;
 
