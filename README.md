@@ -8,6 +8,28 @@
 
 > yarn add lesta-mt-api
 
+## Использование
+
+Для того чтобы взаимодействовать с API, вам нужен applicationId. Его можно получить [тут](https://developers.lesta.ru/applications/).
+На странице нужно нажать кнопку создать запрос или же, если у вас есть доступ, войти и создать новое приложение.
+После того как у вас он будет его нужно использовать следующим образом.
+
+```
+// Имя файла - test.ts
+
+import { LestaAPI } from 'lesta-mt-api';
+
+const api = new LestaAPI({
+    applicationId: 'ТУТ ID ВАШЕГО ПРИЛОЖЕНИЯ',
+});
+
+// Ниже пример запроса
+api.account
+  .info({ account_id: [1] })
+  .then((r) => console.log(r))
+  .catch((e) => console.log(e));
+```
+
 ## Реализованные запросы
 
 Запросы:
