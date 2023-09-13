@@ -1,3 +1,5 @@
+import { TechClanRole } from '@lib/enums';
+
 interface IClansAccountInfoClanEmblemsResponseDTO {
   /**
    * Перечень ссылок на эмблемы 195x195 px
@@ -69,7 +71,7 @@ export interface IClansAccountInfoResponseDTO {
     /**
      * Техническое название должности
      */
-    role: string;
+    role: TechClanRole;
     /**
      * Позиция
      */

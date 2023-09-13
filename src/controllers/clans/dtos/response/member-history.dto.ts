@@ -1,3 +1,5 @@
+import { TechClanRole } from '@lib/enums';
+
 export interface IClansMemberHistoryResponseDTO {
   /**
    * Идентификатор аккаунта игрока
@@ -16,7 +18,7 @@ export interface IClansMemberHistoryResponseDTO {
    */
   left_at: Date;
   /**
-   * Последняя должность в клане
+   * Последняя должность в клане. Техническое название должности
    */
-  role: string;
+  role: TechClanRole;
 }
